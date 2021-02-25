@@ -1,59 +1,54 @@
-*,
-*::after,
-*::after {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
+html {
+  font-size: 10px;
+  background: url("./ufo.jpg") bottom center;
+  background-size: cover;
 }
-body {
-  padding: 0;
+
+body,
+html {
   margin: 0;
-  background: linear-gradient(to right, #00aaff, #00ff6c);
+  padding: 0;
+  font-family: "DotGothic16", sans-serif;
 }
 
-.calculator-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(6, 100px);
-}
-
-.calculator-grid > button {
-  cursor: pointer;
-  font-size: 2rem;
-  border: 1px solid white;
-  outline: none;
-  background: rgba(255, 255, 255, 0.75);
-}
-
-.calculator-grid > button:hover {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.span-two {
-  grid-column: span 2;
-}
-
-.output {
-  grid-column: 1 /-1;
-  background: rgba(0, 0, 0, 0.75);
+.keys {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
-.output .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
+.key {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
   font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+  box-shadow: 0px 0px 25px #9fc766;
 }
 
-.output .current-operand {
-  color: white;
-  font-size: 2.5rem;
+.playing {
+  transform: scale(1.1);
+  border-color: rgba(255, 198, 0, 0.4);
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+  color: rgba(255, 198, 0, 0.4);
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: rgba(255, 0, 57, 0.4);
 }
